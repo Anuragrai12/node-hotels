@@ -1,6 +1,10 @@
+// import port and url
+require('dotenv').config();
 const mongoose =require('mongoose');
 // defile the MongoDB connection URL
- const  mongoURL = 'mongodb://localhost:27017/hotels'
+// const mongoURL = process.env.DB_URL_lOCAL;//replace my database with your URL
+ const  mongoURL = process.env.MONGODB_URL;
+ 
 
  mongoose.connect(mongoURL,
     {
